@@ -30,11 +30,17 @@
 
 /* _____________ 你的代码 _____________ */
 // 知识点：字符串的遍历
+// type PercentageParser<A extends string> = A extends `${infer L}${infer R}`
+//   ? L extends '+' | '-'
+//     ? R extends `${infer N}%` ? [L, N, '%'] : [L, R, '']
+//     : A extends `${infer N}%` ? ['', N, '%'] : ['', A, '']
+//   : ['', '', '']
+  
 type PercentageParser<A extends string> = A extends `${infer L}${infer R}`
-  ? L extends '+' | '-'
-    ? R extends `${infer N}%` ? [L, N, '%'] : [L, R, '']
-    : A extends `${infer N}%` ? ['', N, '%'] : ['', A, '']
-  : ['', '', '']
+? L extends '+' | '-'
+? R extends `${infer N}%` ? [L, N, '%'] : [L, R, '']
+: A extends `${infer N}%` ? ['', N, '%'] : ['', A, '']
+: ['', '', '']
 // type P1<T extends string> = T extends `${infer F extends '+' | '-'}${infer R}`
   // ? F
   // : '';
