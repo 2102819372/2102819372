@@ -1,0 +1,1 @@
+import{useSharedMouse as e}from"./index.72e99e56.js";import{n as o,o as s,c as t,_ as r}from"./entry.b800b8e9.js";import"./index.ba0913d4.js";import"./index.2b6e8cd0.js";const p=o({__name:"CompB",setup(a){return e(),(c,m)=>(s(),t("div",null,"CompB"))}}),l=r(p,[["__file","/workspace/2102819372/nuxt_test/src/pages/charts/ch03/sharedComposable/CompB.vue"]]);export{l as default};
