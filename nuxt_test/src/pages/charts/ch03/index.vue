@@ -7,6 +7,7 @@ import {
   useWindowSize,
   useLastChanged,
   useDebouncedRefHistory,
+  useCounter,
 } from "@vueuse/core";
 import RootComp from "./vueuseInject/RootComp.vue";
 import counter from "./vueuseInject/couter.vue";
@@ -32,22 +33,32 @@ const { state, isReady, isLoading, execute } = useAsyncState(
 </script>
 <template>
   <div>
-    <NuxtLink to=""></NuxtLink>
-    <h1 class="text-3xl">VueUseTest</h1>
-    <div>ch03</div>
+    <h1 class="text-2xl">ch03</h1>
+    <h2 class="text-xl">VueUseTest</h2>
+    <hr />
+    <br />
+    useasync
+    <hr />
     <div>isReady:{{ isReady }}</div>
     <div>isLoading:{{ isLoading }}</div>
     <div>{{ state }}</div>
     <button @click="execute(2000)" class="bg-red-200 text-zinc-50 rounded">
       execute
     </button>
-    <div class="text-rose-400 text-lg">鼠标</div>
+    <div></div>
+    <br />
+    <div class="text-rose-400 text-lg">鼠标 useMouse</div>
+    <hr />
     <div>{{ x }}</div>
     <div>{{ y }}</div>
-    <div class="text-rose-400 text-lg">window</div>
+    <br />
+    <div class="text-rose-400 text-lg">Usewindow</div>
+    <hr />
     <div>{{ width }}</div>
     <div>{{ height }}</div>
+    <br />
     <div class="text-rose-400 text-lg">lastChange</div>
+    <hr />
     <div>
       <input
         type="text"
@@ -73,11 +84,19 @@ const { state, isReady, isLoading, execute } = useAsyncState(
     <div v-for="item in history" :key="item.timestamp">{{ item.snapshot }}</div>
     <div>上次修改时间</div>
     <div>{{ lastChange }}</div>
+    <br />
     vueuseInject
+    <hr />
     <RootComp>
       <counter />
       <doubelVue />
       <Button />
     </RootComp>
+    <br />
+    vueusesharedComposable
+    <hr />
+    <br />
+    useManualRefHistory
+    <hr />
   </div>
 </template>
