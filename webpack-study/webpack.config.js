@@ -21,7 +21,7 @@ module.exports = function (env) {
       rules: [
         {
           test: /\.css$/,
-          use: ["./loaders/style-loaders"],
+          use: ["css-loader"],
         },
         {
           test: /\.(png)|(jpg)|(gif)$/,
