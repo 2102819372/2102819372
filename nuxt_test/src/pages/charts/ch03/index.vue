@@ -55,7 +55,9 @@ const lastChange = useLastChanged(foo);
 const { x, y } = useMouse();
 const { width, height } = useWindowSize();
 const { state, isReady, isLoading, execute } = useAsyncState(
-  axios.get("https://jsonplaceholder.typicode.com/todos/1").then((t) => t.data),
+  axios
+    .get("https://jsonplaceholder.typicode.com/todos/1")
+    .then((t: any) => t.data),
   {},
   {
     delay: 2000,
@@ -65,12 +67,15 @@ const { state, isReady, isLoading, execute } = useAsyncState(
 const timeout = useTimeoutFn(() => {
   message.value = startMessage;
 }, 3000);
-watch(visibility, (current, previous) => {
-  if (current === "visible" && previous === "hidden") {
-    message.value = "🎉 Welcome back!";
-    timeout.start();
+watch(
+  visibility,
+  (current: "visible" | "hidden", previous: "visible" | "hidden") => {
+    if (current === "visible" && previous === "hidden") {
+      message.value = "🎉 Welcome back!";
+      timeout.start();
+    }
   }
-});
+);
 const el = ref<HTMLElement | null>(null);
 const {
   x: draX,
