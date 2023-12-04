@@ -107,6 +107,7 @@ declare global {
   const useModel: typeof import('../../node_modules/.pnpm/vue@3.3.7_typescript@5.3.2/node_modules/vue')['useModel']
   const useNuxtApp: typeof import('../../node_modules/.pnpm/nuxt@3.8.0_@types+node@20.10.3_eslint@8.53.0_less@4.2.0_typescript@5.3.2_vite@4.5.0/node_modules/nuxt/dist/app')['useNuxtApp']
   const useNuxtData: typeof import('../../node_modules/.pnpm/nuxt@3.8.0_@types+node@20.10.3_eslint@8.53.0_less@4.2.0_typescript@5.3.2_vite@4.5.0/node_modules/nuxt/dist/app')['useNuxtData']
+  const useNuxtDevTools: typeof import('../../node_modules/.pnpm/@nuxt+devtools@1.0.0_nuxt@3.8.0_vite@4.5.0/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']
   const useRequestEvent: typeof import('../../node_modules/.pnpm/nuxt@3.8.0_@types+node@20.10.3_eslint@8.53.0_less@4.2.0_typescript@5.3.2_vite@4.5.0/node_modules/nuxt/dist/app')['useRequestEvent']
   const useRequestFetch: typeof import('../../node_modules/.pnpm/nuxt@3.8.0_@types+node@20.10.3_eslint@8.53.0_less@4.2.0_typescript@5.3.2_vite@4.5.0/node_modules/nuxt/dist/app')['useRequestFetch']
   const useRequestHeaders: typeof import('../../node_modules/.pnpm/nuxt@3.8.0_@types+node@20.10.3_eslint@8.53.0_less@4.2.0_typescript@5.3.2_vite@4.5.0/node_modules/nuxt/dist/app')['useRequestHeaders']
@@ -247,6 +248,7 @@ declare module 'vue' {
     readonly useModel: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.3.7_typescript@5.3.2/node_modules/vue')['useModel']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.8.0_@types+node@20.10.3_eslint@8.53.0_less@4.2.0_typescript@5.3.2_vite@4.5.0/node_modules/nuxt/dist/app')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.8.0_@types+node@20.10.3_eslint@8.53.0_less@4.2.0_typescript@5.3.2_vite@4.5.0/node_modules/nuxt/dist/app')['useNuxtData']>
+    readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+devtools@1.0.0_nuxt@3.8.0_vite@4.5.0/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
     readonly useRequestEvent: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.8.0_@types+node@20.10.3_eslint@8.53.0_less@4.2.0_typescript@5.3.2_vite@4.5.0/node_modules/nuxt/dist/app')['useRequestEvent']>
     readonly useRequestFetch: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.8.0_@types+node@20.10.3_eslint@8.53.0_less@4.2.0_typescript@5.3.2_vite@4.5.0/node_modules/nuxt/dist/app')['useRequestFetch']>
     readonly useRequestHeaders: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.8.0_@types+node@20.10.3_eslint@8.53.0_less@4.2.0_typescript@5.3.2_vite@4.5.0/node_modules/nuxt/dist/app')['useRequestHeaders']>
@@ -381,6 +383,7 @@ declare module '@vue/runtime-core' {
     readonly useModel: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.3.7_typescript@5.3.2/node_modules/vue')['useModel']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.8.0_@types+node@20.10.3_eslint@8.53.0_less@4.2.0_typescript@5.3.2_vite@4.5.0/node_modules/nuxt/dist/app')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.8.0_@types+node@20.10.3_eslint@8.53.0_less@4.2.0_typescript@5.3.2_vite@4.5.0/node_modules/nuxt/dist/app')['useNuxtData']>
+    readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+devtools@1.0.0_nuxt@3.8.0_vite@4.5.0/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
     readonly useRequestEvent: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.8.0_@types+node@20.10.3_eslint@8.53.0_less@4.2.0_typescript@5.3.2_vite@4.5.0/node_modules/nuxt/dist/app')['useRequestEvent']>
     readonly useRequestFetch: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.8.0_@types+node@20.10.3_eslint@8.53.0_less@4.2.0_typescript@5.3.2_vite@4.5.0/node_modules/nuxt/dist/app')['useRequestFetch']>
     readonly useRequestHeaders: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.8.0_@types+node@20.10.3_eslint@8.53.0_less@4.2.0_typescript@5.3.2_vite@4.5.0/node_modules/nuxt/dist/app')['useRequestHeaders']>

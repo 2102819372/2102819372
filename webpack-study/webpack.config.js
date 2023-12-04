@@ -1,3 +1,11 @@
+/*
+ * @Author: 冷 晓飞 2102819372@qq.com
+ * @Date: 2023-12-04 00:59:47
+ * @LastEditors: 冷 晓飞 2102819372@qq.com
+ * @LastEditTime: 2023-12-04 03:29:21
+ * @FilePath: /2102819372/webpack-study/webpack.config.js
+ * @Description: webpack基础配置
+ */
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { templateContent } = require("./template");
@@ -47,7 +55,23 @@ module.exports = function (env) {
         chunks: ["index"],
         // filename: "index.html",
       }),
-      new CopyPlugin({ patterns: [{ from: "./public", to: "./" }] }),
+      new CopyPlugin({
+        patterns: [
+          {
+            from: "./public",
+            to: "./",
+            noErrorOnMissing: true, // 忽略不存在的文件
+            globOptions: {
+              ignore: ["**/index.html"],
+            },
+          },
+        ],
+      }),
     ],
+    devServer: {
+      port: 8080,
+      open: true,
+      hot: true,
+    },
   };
 };
