@@ -2,7 +2,7 @@
  * @Author: 冷 晓飞 2102819372@qq.com
  * @Date: 2023-12-04 00:59:47
  * @LastEditors: 冷 晓飞 2102819372@qq.com
- * @LastEditTime: 2023-12-04 02:13:37
+ * @LastEditTime: 2023-12-05 07:22:52
  * @FilePath: /2102819372/nuxt_test/src/pages/charts/ch04.vue
  * @Description: ch04
 -->

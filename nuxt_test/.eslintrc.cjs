@@ -9,6 +9,7 @@ module.exports = {
     "plugin:nuxt/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:vue/vue3-essential",
+    "plugin:storybook/recommended"
   ],
   overrides: [
     {
